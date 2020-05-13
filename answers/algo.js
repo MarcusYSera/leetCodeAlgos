@@ -1,4 +1,4 @@
-var destCity = function(paths) {
+var destCity = function (paths) {
   var x = 0;
 };
 
