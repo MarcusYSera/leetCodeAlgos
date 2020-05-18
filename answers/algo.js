@@ -28,6 +28,7 @@ var freqAlphabets = function (s) {
     '26#': 'z',
   };
   var newArr = s.split('');
+  var blankArr = [];
   // var runThrough = newArr.map(x => {
   //   console.log(x);
   // });
@@ -35,11 +36,14 @@ var freqAlphabets = function (s) {
     // console.log(newArr[i]);
     if (newArr[i + 2] == '#') {
       console.log(newArr[i] + newArr[i + 1] + newArr[i + 2]);
-      i = i + 2;
+      const newChar = (i = i + 2);
     } else {
       console.log('else: ' + newArr[i]);
     }
   }
+  var ans = blankArr.toString();
+  console.log('answer: ' + ans);
+  return ans;
 };
 
 freqAlphabets('10#11#12');
