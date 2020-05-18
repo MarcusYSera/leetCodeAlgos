@@ -32,9 +32,12 @@ var freqAlphabets = function (s) {
   //   console.log(x);
   // });
   for (var i = 0; i < newArr.length; i++) {
-    console.log(newArr[i]);
-    if (newArr[i + 2]) {
-      console.log('not null');
+    // console.log(newArr[i]);
+    if (newArr[i + 2] == '#') {
+      console.log(newArr[i] + newArr[i + 1] + newArr[i + 2]);
+      i = i + 2;
+    } else {
+      console.log('else: ' + newArr[i]);
     }
   }
 };
