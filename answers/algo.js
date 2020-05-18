@@ -29,23 +29,16 @@ var freqAlphabets = function (s) {
   };
   var newArr = s.split('');
   var blankArr = [];
-  // var runThrough = newArr.map(x => {
-  //   console.log(x);
-  // });
   for (var i = 0; i < newArr.length; i++) {
-    // console.log(newArr[i]);
     if (newArr[i + 2] == '#') {
-      // console.log(newArr[i] + newArr[i + 1] + newArr[i + 2]);
       const n = (newArr[i] + newArr[i + 1] + newArr[i + 2]).toString();
-      console.log(n);
-      // blankArr.kAndV(n);
+      blankArr.push(kAndV[n]);
       const newChar = (i = i + 2);
     } else {
-      // console.log('else: ' + newArr[i]);
+      blankArr.push(kAndV[newArr[i]]);
     }
   }
-  var ans = blankArr.toString();
-  // console.log('answer: ' + ans);
+  var ans = blankArr.join('');
   return ans;
 };
 
