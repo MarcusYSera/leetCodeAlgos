@@ -28,10 +28,15 @@ var freqAlphabets = function (s) {
     '26#': 'z',
   };
   var newArr = s.split('');
-  var index = 0;
-  var testStr = s.charAt(index);
-  // console.log(newArr);
-  console.log(testStr);
+  // var runThrough = newArr.map(x => {
+  //   console.log(x);
+  // });
+  for (var i = 0; i < newArr.length; i++) {
+    console.log(newArr[i]);
+    if (newArr[i + 2]) {
+      console.log('not null');
+    }
+  }
 };
 
 freqAlphabets('10#11#12');
