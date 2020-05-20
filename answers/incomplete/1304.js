@@ -5,6 +5,11 @@ var sumZero = n => {
   var newArr = [];
   for (var i = 0; i < n; i++) {
     console.log(i);
+    if (n % 2 === 0) {
+      console.log('even');
+    } else if (n % 2 == 1) {
+      console.log('odd');
+    }
   }
 };
 
