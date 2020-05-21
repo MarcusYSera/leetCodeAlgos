@@ -1,5 +1,8 @@
 // Find N Unique Integers Sum up to Zero
 
+// refactor to speed up
+// memory usage 100%
+
 var sumZero = n => {
   // console.log(n);
   var newArr = [];

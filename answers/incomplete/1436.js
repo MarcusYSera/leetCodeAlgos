@@ -1,3 +1,5 @@
+// 1436. Destination City
+
 var destCity = function (paths) {
   // var start = paths[0][0];
   var fin = paths[0][1];
