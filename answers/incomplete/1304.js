@@ -6,17 +6,25 @@ var sumZero = n => {
   for (var i = 0; i < n; i++) {
     // console.log(i);
     if (n % 2 === 0) {
-      // console.log('even');
+      newArr.push(n - i);
+      newArr.push((n - i) * -1);
+      i++;
     } else if (n % 2 == 1) {
-      newArr.push(0);
-      // console.log('odd');
-      console.log(newArr);
-      
+      if (newArr[0] == null) {
+        newArr.push(0);
+        i++;
+      } else if (newArr[0] != null) {
+        newArr.push(n - i);
+        newArr.push((n - i) * -1);
+        i++;
+      }
     }
+    // return;
   }
+  return newArr;
 };
 
 sumZero(5);
-sumZero(4);
+// sumZero(4);
 // sumZero(1);
 // sumZero(7);
