@@ -1,12 +1,14 @@
 // Self Dividing Numbers
+// refactor: is slower than 88% of other entries
+// takes more memory than 97% of other entries
 
 var selfDividingNumbers = (left, right) => {
   var newArr = [];
   for (var i = left; i <= right; i++) {
     if (i > 9) {
       const newNum = i.toString().split('');
-      var count = newNum.length - 1;
-      for (var x = 0; x < newNum.length - 1; x++) {
+      var count = newNum.length;
+      for (var x = 0; x < newNum.length; x++) {
         if (Number(newNum[x]) == 0) {
           break;
         }
