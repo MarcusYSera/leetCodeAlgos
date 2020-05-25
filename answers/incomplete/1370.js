@@ -6,6 +6,7 @@ var sortString = s => {
   for (var i = 0; i < m.length; i++) {
     console.log(m[i]);
     newArr.push(m.sort()[0]);
+    // console.log('')
   }
   console.log(newArr);
 };
