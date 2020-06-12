@@ -1,8 +1,9 @@
 // 1021. Remove Outermost Parentheses
 
 var removeOuterParentheses = S => {
-  console.log('hello');
+  var newArr = S.split('');
+  if()
 };
 
-removeOuterParentheses('(()())(())');
+console.log(removeOuterParentheses('(()())(())'));
 // removeOuterParentheses('(()())(())(()(()))');
