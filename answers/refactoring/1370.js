@@ -1,7 +1,10 @@
+// 1370. increasing decreasing string
+// slower than 55% of entries and used more memory than 93% of submissions
+
 var sortString = s => {
   var turn = 'forward';
   var newArr = [];
-  var nomers =  s =>{
+  var nomers = s => {
     const temp = s.split('').sort();
     if (turn === 'forward' && temp.length !== 0) {
       var step = 'stepOne';
@@ -71,7 +74,7 @@ var sortString = s => {
     return newArr;
   };
   nomers(s);
-  return newArr.join('')
+  return newArr.join('');
 };
 
 console.log(nomers('aaaabbbbcccc'));
