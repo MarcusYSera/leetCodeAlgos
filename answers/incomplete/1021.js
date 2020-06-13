@@ -4,7 +4,9 @@ var removeOuterParentheses = S => {
   var newArr = S.split('');
   var count = 0;
   for (var i = 0; i < S.length; i++) {
-    console.log('hello');
+    if ('(' === newArr[i]) {
+      console.log('open');
+    }
   }
 };
 
