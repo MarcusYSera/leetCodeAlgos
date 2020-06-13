@@ -7,12 +7,15 @@ var removeOuterParentheses = S => {
   for (var i = 0; i < S.length; i++) {
     if (newArr[i] === newArr[i + 1]) {
       countOpen++;
-    } else {
-      newArr.splice(i, 1);
-      newArr.splice()
+    }
+    if (newArr[i] === ')') {
+      newArr.splice(i + countOpen - 1, 1);
+      newArr.splice(0, 1);
     }
   }
+  return newArr.join('');
 };
 
-console.log(removeOuterParentheses('(()())(())'));
+// console.log(removeOuterParentheses('(()())(())'));
+console.log(removeOuterParentheses('(()())'));
 // removeOuterParentheses('(()())(())(()(()))');
