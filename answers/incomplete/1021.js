@@ -2,10 +2,14 @@
 
 var removeOuterParentheses = S => {
   var newArr = S.split('');
-  var count = 0;
+  var countOpen = 0;
+  // var countClosed = 0;
   for (var i = 0; i < S.length; i++) {
-    if ('(' === newArr[i]) {
-      console.log('open');
+    if (newArr[i] === newArr[i + 1]) {
+      countOpen++;
+    } else {
+      newArr.splice(i, 1);
+      newArr.splice()
     }
   }
 };
