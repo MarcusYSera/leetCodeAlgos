@@ -8,7 +8,7 @@ var removeOuterParentheses = S => {
   var closing = false;
   // var countClosed = 0;
   for (var i = 0; i < S.length; i++) {
-    if(newArr[i]==='(' && ){
+    if(newArr[i]==='(' && newArr[i]==='(' && start === 0 || start){
       start = i;
     }
     if (open === true && closing === true) {
