@@ -8,8 +8,14 @@ var removeOuterParentheses = S => {
   var closing = false;
   // var countClosed = 0;
   for (var i = 0; i < S.length; i++) {
-    if(newArr[i]==='(' && newArr[i]==='(' && start === 0 || start){
+    if (
+      (newArr[i] === '(' && newArr[i + 1] === '(' && start === 0) ||
+      (start === 0 && newArr[i] === '(' && newArr[i + 1] === ')')
+    ) {
       start = i;
+    }
+    if(start !==0){
+      
     }
     if (open === true && closing === true) {
       newArr.splice(start, 1);
