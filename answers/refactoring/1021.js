@@ -1,4 +1,5 @@
 // 1021. Remove Outermost Parentheses
+// Had to look at LeetCode, revisit later
 
 var removeOuterParentheses = S => {
   var newStr = '';
