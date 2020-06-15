@@ -1,33 +1,24 @@
 // 1021. Remove Outermost Parentheses
 
 var removeOuterParentheses = S => {
-  var newArr = S.split('');
-  var start = 0;
-  var finish = 0;
-  var open = false;
-  var closing = false;
-  // var countClosed = 0;
+  var newStr = '';
+  var outer = 0;
   for (var i = 0; i < S.length; i++) {
-    if (
-      (newArr[i] === '(' && newArr[i + 1] === '(' && start === 0) ||
-      (start === 0 && newArr[i] === '(' && newArr[i + 1] === ')')
-    ) {
-      start = i;
+    if (S[i] === '(') {
+      if (outer > 0) {
+        newStr += '(';
+      }
+      outer++;
+    } else if (S[i] === ')') {
+      if (outer > 1) {
+        newStr += ')';
+      }
+      outer--;
     }
-    if(start !==0){
-      
-    }
-    if (open === true && closing === true) {
-      newArr.splice(start, 1);
-      newArr.splice(finish + 1, 1);
-      open = false;
-      closing = false;
-    }
-    console.log('progression: ' + newArr);
   }
-  return newArr.join('');
+  return newStr;
 };
 
 // console.log(removeOuterParentheses('(()())(())'));
-console.log(removeOuterParentheses('(()())'));
-// removeOuterParentheses('(()())(())(()(()))');
+// console.log(removeOuterParentheses('(()())'));
+console.log(removeOuterParentheses('(()())(())(()(()))'));
