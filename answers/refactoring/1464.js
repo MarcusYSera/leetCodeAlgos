@@ -1,4 +1,5 @@
 // 1464. Maximum Product of Two Elements in an Array
+// not optimized
 // Refactor slower: 31% more memory: 42%
 
 var maxProduct = nums => {
