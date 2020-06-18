@@ -1,3 +1,6 @@
+// https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/
+// https://repl.it/@beiatrix/NoisyAridWamp#index.js
+
 class Node {
   constructor(data) {
     this.data = data;
