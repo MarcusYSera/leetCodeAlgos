@@ -1,6 +1,5 @@
 // 657. Robot Return to Origin
-
-
+// slower than 65% more memory than 86%
 
 var judgeCircle = moves => {
   moves = moves.split('');
