@@ -1,4 +1,5 @@
 // 1460. Make Two Arrays Equal by Reversing Sub-arrays
+// slower than 27% uses more than 71% memory
 
 var canBeEqual = (target, arr) => {
   let leng = target.length;
