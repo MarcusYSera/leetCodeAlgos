@@ -7,7 +7,7 @@ var checkPossibility = nums => {
       return 6 - nums.length;
     } else if (nums.length > 20) {
       return nums.length - 20;
-    } else if (/ab+c/) {
+    } else if (/d/) {
     } else if ((nums[i] === nums[i + 1]) === nums[i + 2]) {
       count++;
     } else if (count !== 0) {
