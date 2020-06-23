@@ -1,7 +1,7 @@
 // 420. Strong Password Checker
 
 var strongPasswordChecker = s => {
-  if (/^(a-zA-Z0-9){6,20}$/.test(s) === false) {
+  if (/^([A-Za-z0-9])/.test(s) === false) {
     if (s.length < 6) {
       console.log('s.length < 6');
       return 6 - s.length;
@@ -12,6 +12,7 @@ var strongPasswordChecker = s => {
       return 'error';
     }
   } else {
+    console.log('statement was true');
     return 0;
   }
   // var count = 0;
@@ -31,4 +32,5 @@ var strongPasswordChecker = s => {
   // }
 };
 
-console.log(strongPasswordChecker('taCqBA1236'));
+// console.log(strongPasswordChecker('tayloCASDW1236'));
+console.log(strongPasswordChecker('1236'));
