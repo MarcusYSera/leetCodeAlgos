@@ -2,13 +2,14 @@
 
 var strongPasswordChecker = s => {
   if (/^(a-zA-Z0-9){6,20}$/.test(s) === false) {
-    console.log('is s.length <6: ' + s.length < 6 ? true : false);
     if (s.length < 6) {
       console.log('s.length < 6');
       return 6 - s.length;
     } else if (s.length > 20) {
       console.log('s.length > 20');
       return s.length - 20;
+    } else {
+      return 'error';
     }
   } else {
     return 0;
@@ -30,4 +31,4 @@ var strongPasswordChecker = s => {
   // }
 };
 
-console.log(strongPasswordChecker('aaa123'));
+console.log(strongPasswordChecker('taCqBA1236'));
