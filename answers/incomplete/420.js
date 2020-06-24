@@ -1,7 +1,7 @@
 // 420. Strong Password Checker
 
 var strongPasswordChecker = s => {
-  if (/^([A-Za-z0-9])/.test(s) === false) {
+  if (/^([A-Za-z0-9]{6,20})/.test(s) === false) {
     if (s.length < 6) {
       console.log('s.length < 6');
       return 6 - s.length;
@@ -11,7 +11,7 @@ var strongPasswordChecker = s => {
     } else {
       return 'error';
     }
-  } else {
+  } else if (/^([A-Za-z0-9]{6,20})/.test(s) === true) {
     console.log('statement was true');
     return 0;
   }
