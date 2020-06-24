@@ -13,11 +13,14 @@ var strongPasswordChecker = s => {
     }
   } else if (/^([A-Za-z0-9]{6,20})/.test(s) === true) {
     console.log('statement was true');
-    if (/^([A-Z])/.test(s) === false) {
+    console.log(/^([a-z0-9])/.test(s));
+    if (/^([a-z0-9])/.test(s) === true) {
       console.log('no caps');
-    } else if (/^([a-z])/.test(s) === false) {
+    }
+    if (/^([A-Z0-9])/.test(s) === true) {
       console.log('no lower case');
-    } else if (/^([0-9])/.test(s) === false) {
+    }
+    if (/^([A-za-z])/.test(s) === true) {
       console.log('no num');
     } else {
       return 0;
@@ -40,5 +43,6 @@ var strongPasswordChecker = s => {
   // }
 };
 
-console.log(strongPasswordChecker('ASDFasdfaGWERGW'));
+// console.log(strongPasswordChecker('ASDFasdfaGWERGW'));
+console.log(strongPasswordChecker('012341asdfa'));
 // console.log(strongPasswordChecker('1236'));
