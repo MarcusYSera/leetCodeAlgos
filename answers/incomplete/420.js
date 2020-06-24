@@ -13,7 +13,15 @@ var strongPasswordChecker = s => {
     }
   } else if (/^([A-Za-z0-9]{6,20})/.test(s) === true) {
     console.log('statement was true');
-    return 0;
+    if (/^([A-Z])/.test(s) === false) {
+      console.log('no caps');
+    } else if (/^([a-z])/.test(s) === false) {
+      console.log('no lower case');
+    } else if (/^([0-9])/.test(s) === false) {
+      console.log('no num');
+    } else {
+      return 0;
+    }
   }
   // var count = 0;
   // for (let i = 0; i < s.length; i++) {
@@ -32,5 +40,5 @@ var strongPasswordChecker = s => {
   // }
 };
 
-// console.log(strongPasswordChecker('tayloCASDW1236'));
-console.log(strongPasswordChecker('1236'));
+console.log(strongPasswordChecker('ASDFasdfaGWERGW'));
+// console.log(strongPasswordChecker('1236'));
