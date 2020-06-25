@@ -1,7 +1,7 @@
 // 420. Strong Password Checker
 
 var strongPasswordChecker = s => {
-  if (/^([A-Za-z0-9]{6,20})/.test(s) === false) {
+  if (/([A-Za-z0-9]{6,20})/.test(s) === false) {
     if (s.length < 6) {
       console.log('s.length < 6');
       return 6 - s.length;
@@ -11,17 +11,17 @@ var strongPasswordChecker = s => {
     } else {
       return 'error';
     }
-  } else if (/^([A-Za-z0-9]{6,20})/.test(s) === true) {
+  } else if (/([A-Za-z0-9]{6,20})/.test(s) === true) {
     console.log('statement was true');
-    console.log(/^([a-z0-9])/.test(s));
-    if (/^([a-z0-9])/.test(s) === true) {
-      console.log('no caps');
+    console.log(/([a-z])/.test(s));
+    if (/([a-z])/.test(s) === true) {
+      console.log('caps');
     }
-    if (/^([A-Z0-9])/.test(s) === true) {
-      console.log('no lower case');
+    if (/([A-Z])/.test(s) === true) {
+      console.log('lower case');
     }
-    if (/^([A-za-z])/.test(s) === true) {
-      console.log('no num');
+    if (/([0-9])/.test(s) === true) {
+      console.log('num');
     } else {
       return 0;
     }
