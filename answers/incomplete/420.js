@@ -27,31 +27,17 @@ var strongPasswordChecker = s => {
       console.log('no num');
       count++;
     }
-    console.log(/(.)\1{2,}/.test(s));
-    if (/(.)\1{2,}/.test(s) === true) {
-      console.log('more than 3');
+    let x = s.split('');
+    while (/(.)\1{2,}/.test(s) === true) {
+      x.splice(s.search(/(.)\1{2,}/), 1);
       count++;
+      s = x.join('');
     }
     return count;
   }
-  // var count = 0;
-  // for (let i = 0; i < s.length; i++) {
-  //   if (s.length < 6) {
-  //     return 6 - s.length;
-  //   } else if (s.length > 20) {
-  //     return s.length - 20;
-  //   } else if (/d/) {
-  //   } else if ((s[i] === s[i + 1]) === s[i + 2]) {
-  //     count++;
-  //   } else if (count !== 0) {
-  //     return count;
-  //   } else {
-  //     return 0;
-  //   }
-  // }
 };
 
 // console.log(strongPasswordChecker('ASDFasdfaGWERGW'));
 // console.log(strongPasswordChecker('012341asdfa'));
-console.log(strongPasswordChecker('000aaaBBB999'));
+console.log(strongPasswordChecker('00aaaBBB999'));
 // console.log(strongPasswordChecker('1236'));
