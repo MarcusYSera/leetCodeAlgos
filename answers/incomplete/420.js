@@ -10,6 +10,14 @@ var strongPasswordChecker = s => {
       console.log('s.length > 20');
       return s.length - 20;
     }
+  } else if (/(.)\1{2,}/.test(s) === true) {
+    let x = s.split('');
+    while (/(.)\1{2,}/.test(s) === true) {
+      x.splice(s.search(/(.)\1{2,}/), 1);
+      count++;
+      s = x.join('');
+    }
+    return count;
   } else if (/([A-Za-z0-9]{6,20})/.test(s) === true) {
     console.log('statement was true');
     if (s.length === 20) {
@@ -27,14 +35,12 @@ var strongPasswordChecker = s => {
       console.log('no num');
       count++;
     }
-    let x = s.split('');
-    while (/(.)\1{2,}/.test(s) === true) {
-      x.splice(s.search(/(.)\1{2,}/), 1);
-      count++;
-      s = x.join('');
-    }
     return count;
   }
+};
+
+var changeRepeat = x => {
+  return x;
 };
 
 // console.log(strongPasswordChecker('ASDFasdfaGWERGW'));
