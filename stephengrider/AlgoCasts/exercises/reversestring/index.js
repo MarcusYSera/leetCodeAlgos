@@ -8,9 +8,24 @@
 
 // 3 Methods
 
-function reverse(str) {
-}
+function reverse(str) {}
 
 // reverse('abcd');
 
 module.exports = reverse;
+
+// function reverse(str) {
+//   return str.split('').reverse().join('');
+// }
+
+// function reverse(str) {
+//   return str.split('').reduce((accumulate, current) => current + accumulate);
+// }
+
+// function reverse(str) {
+//   let answer = '';
+//   for (let char of str) {
+//     answer = char + answer;
+//   }
+//   return answer;
+// }
