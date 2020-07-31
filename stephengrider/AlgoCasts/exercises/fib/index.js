@@ -21,8 +21,6 @@ function fib(n) {
 
 module.exports = fib;
 
-
-
 // function fib(n) {
 //   const result = [0, 1];
 
@@ -32,4 +30,11 @@ module.exports = fib;
 //     result.push(a + b);
 //   }
 //   return result[n];
+// }
+
+// function fib(n) {
+//   if (n < 2) {
+//     return n;
+//   }
+//   return fib(n - 1) + fib(n - 2);
 // }
