@@ -17,12 +17,12 @@ function fib(n) {
 
     result.push(a + b);
   }
-  return result;
+  return result[n];
 }
 
 module.exports = fib;
 
-// #1
+// #1 recursive
 
 // function memoize(fn) {
 //   const cache = {};
@@ -46,7 +46,7 @@ module.exports = fib;
 
 // const fib = memoize(slowFib);
 
-// #2
+// #2 iterative
 
 // function fib(n) {
 //   const result = [0, 1];
@@ -59,7 +59,7 @@ module.exports = fib;
 //   return result[n];
 // }
 
-// #3
+// #3 recursive, but it takes exponential time 2^n, meaning time doubles for each element
 
 // function fib(n) {
 //   if (n < 2) {
