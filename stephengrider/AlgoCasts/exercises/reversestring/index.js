@@ -8,7 +8,9 @@
 
 // 3 Methods
 
-function reverse(str) {}
+function reverse(str) {
+  return str.split('').reverse().join('');
+}
 
 // reverse('abcd');
 
