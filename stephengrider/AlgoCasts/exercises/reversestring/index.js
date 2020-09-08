@@ -9,7 +9,7 @@
 // 3 Methods
 
 function reverse(str) {
-        return str.split('').reduce((accumulate,current)=>current+accumulate);
+        return str.split('').reduce((accumulate, current) => current + accumulate);
 }
 
 // reverse('abcd');
