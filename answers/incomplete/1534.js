@@ -3,8 +3,9 @@
 // three four loops
 
 const countGoodTriplets = (arr, a, b, c) => {
-  for (let i = 0; i < arr.length; i++) {}
-
+  for (let i = 0; i < arr.length; i++) {
+    
+  }
   return null;
 };
 
