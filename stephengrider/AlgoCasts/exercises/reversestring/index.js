@@ -9,7 +9,11 @@
 // 3 Methods
 
 function reverse(str) {
-  return str.split('').reduce((accumulator, current) => current + accumulator);
+ let answer = '';
+  for(let char of str){
+    answer = char + answer  
+  }
+   return answer;
 }
 
 // reverse('abcd');
