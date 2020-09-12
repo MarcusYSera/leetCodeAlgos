@@ -9,11 +9,11 @@
 // 3 Methods
 
 function reverse(str) {
-  let answer = '';
+  let ans = '';
   for (let char of str) {
-    answer = char + answer;
+    ans = char + ans;
   }
-  return answer;
+  return ans;
 }
 
 // reverse('abcd');
