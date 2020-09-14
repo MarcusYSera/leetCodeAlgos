@@ -11,16 +11,11 @@ function capitalize(str) {
   let a = str.split(' ');
   let answer = [];
   for (let word of a) {
-    answer.push(cap(word));
+    answer.push(word[0].toUpperCase() + word.slice(1));
   }
   console.log(answer.join(' '));
   return answer.join(' ');
 }
-
-const cap = str => {
-  let newStr = str[0].toUpperCase() + str.slice(1);
-  return newStr;
-};
 
 module.exports = capitalize;
 
