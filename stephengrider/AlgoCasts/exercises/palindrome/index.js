@@ -7,20 +7,12 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {
-  return str.split('').every((char, i) => {
-    return char === str[str.length - i - 1];
-  });
-}
+// Two Solutions
+
+function palindrome(str) {}
 
 module.exports = palindrome;
 
-// function palindrome(str) {
-//   return str.split('').reverse().join('') === str;
-// }
-
-// function palindrome(str) {
-//   return str.split('').every((char, i) => {
-//     return char === str[str.length - i - 1];
-//   });
-// }
+console.log(palindrome('hello'));
+console.log(palindrome('apple'));
+console.log(palindrome('racecar'));

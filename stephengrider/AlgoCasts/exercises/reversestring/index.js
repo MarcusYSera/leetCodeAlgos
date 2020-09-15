@@ -6,32 +6,12 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-// 3 Methods
+// 3 Solutions
 
-function reverse(str) {
-  let ans = '';
-  for (let char of str) {
-    ans = char + ans;
-  }
-  return ans;
-}
+function reverse(str) {}
 
-// reverse('abcd');
+console.log(reverse('abcd'));
+console.log(reverse('hasdfgweqrg'));
+// reverse('hello');
 
 module.exports = reverse;
-
-// function reverse(str) {
-//   return str.split('').reverse().join('');
-// }
-
-// function reverse(str) {
-//   return str.split('').reduce((accumulate, current) => current + accumulate);
-// }
-
-// function reverse(str) {
-//   let answer = '';
-//   for (let char of str) {
-//     answer = char + answer;
-//   }
-//   return answer;
-// }
