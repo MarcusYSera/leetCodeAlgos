@@ -13,15 +13,12 @@ function anagrams(stringA, stringB) {
 }
 
 function cleanString(str) {
-  return str
-    .replace(/[^\w]/g, '')
-    .toLowerCase()
-    .split('')
-    .sort()
-    .join('');
+  return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
 }
 
 module.exports = anagrams;
+
+// Example Start
 
 // function anagrams(stringA, stringB) {
 //   const aCharMap = buildCharMap(stringA);
@@ -49,3 +46,32 @@ module.exports = anagrams;
 //
 //   return charMap;
 // }
+
+// Example Start
+
+// build out a map of lower/upper case 26/26
+// loop through once and increment
+// a - z A-Z
+// [52]
+// [0] -> a
+// [51] -> Z
+// s = "aba"
+// t = "abb"
+// s -> [2,1,0,0 .....]
+// t - >[1,2,0,0,0...]
+
+// const anagram = (s, t) => {
+//   const baseStr = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//   let aArray = [];
+//   let bArray = [];
+//   let countA = 0;
+//   let countB = 0;
+//   for (let i = 0; i < 52; i++) {
+//     if (baseStr[i] === s[i]) {
+//       countA++;
+//     }
+//     if (baseStr[i] === t[i]) {
+//       countB++;
+//     }
+//   }
+// };
