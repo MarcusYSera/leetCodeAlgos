@@ -49,19 +49,58 @@ module.exports = anagrams;
 
 // Example Start
 
-// build out a map of lower/upper case 26/26
-// loop through once and increment
-// a - z A-Z
-// [52]
-// [0] -> a
-// [51] -> Z
-// s = "aba"
-// t = "abb"
-// s -> [2,1,0,0 .....]
-// t - >[1,2,0,0,0...]
 // let _ = require('lodash');
+// return _.isEqual(aArray, bArray);
 
 // counting sort should run in O(n)
+
+// counting sort with map creation, not optimized
+
+// const countingSortAnagram = (s, t) => {
+//   if (!t || !s) {
+//     return false;
+//   }
+//   if (s.length !== t.length) {
+//     return false;
+//   }
+//   let aArray = countingSort(s);
+//   let bArray = countingSort(t);
+//   for (let i = 0; i < aArray.length; i++) {
+//     if (aArray[i] !== bArray[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// const countingSort = arr => {
+//   const baseStr = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//   const count = {};
+//   const newArr = [];
+//   for (let i = 0; i < 52; i++) {
+//     count[baseStr[i]] = 0;
+//   }
+//   for (let i = 0; i < arr.length; i++) {
+//     count[arr[i]] += 1;
+//   }
+//   for (let i in count) {
+//     newArr.push(count[i]);
+//   }
+//   return newArr;
+// };
+
+// console.log(countingSortAnagram('hello', 'good'));
+// console.log(countingSortAnagram('hello', 'hello'));
+// console.log(countingSortAnagram('', 'hello'));
+console.log(countingSortAnagram('hello'));
+// console.log(countingSortAnagram('kajshdfg', 'asdfghjk'));
+// console.log(countingSortAnagram('hilltop', 'waterfall'));
+console.log(countingSortAnagram('jungle', 'gnulej'));
+// console.log(countingSortAnagram('jungle', 'tnulej'));;
+
+// example start
+
+// counting sort optimized with only array creation
 
 const countingSortAnagram = (s, t) => {
   if (!t || !s) {
@@ -72,7 +111,6 @@ const countingSortAnagram = (s, t) => {
   }
   let aArray = countingSort(s);
   let bArray = countingSort(t);
-  // return _.isEqual(aArray, bArray);
   for (let i = 0; i < aArray.length; i++) {
     if (aArray[i] !== bArray[i]) {
       return false;
@@ -81,31 +119,17 @@ const countingSortAnagram = (s, t) => {
   return true;
 };
 
-const countingSort = arr => {
+const countingSort = str => {
   const baseStr = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const count = {};
   const newArr = [];
-  // map creation
   for (let i = 0; i < 52; i++) {
-    count[baseStr[i]] = 0;
+    if (str.includes(baseStr[i])) {
+      let newR = new RegExp(baseStr[i], 'g');
+      let x = str.replace(newR, '');
+      newArr.push(str.length - x.length);
+    } else {
+      newArr.push(0);
+    }
   }
-  // console.log(count);
-  // looping through for increments
-  for (let i = 0; i < arr.length; i++) {
-    count[arr[i]] += 1;
-  }
-  // pulling out values to a direct array
-  for (let i in count) {
-    newArr.push(count[i]);
-  }
-  // return count;
   return newArr;
 };
-
-// console.log(countingSortAnagram('hello', 'good'));
-console.log(countingSortAnagram('hello', 'hello'));
-// console.log(countingSortAnagram('', 'hello'));
-// console.log(countingSortAnagram('hello'));
-// console.log(countingSortAnagram('kajshdfg', 'asdfghjk'));
-// console.log(countingSortAnagram('hilltop', 'waterfall'));
-// console.log(countingSortAnagram('jungle', 'gnulej'));
