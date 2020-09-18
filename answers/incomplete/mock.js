@@ -9,6 +9,7 @@ const regMatch = str => {
   let re = new RegExp(/^[a-z]{1,6}_?\d{0,4}@hackerrankteam.com/, 'g');
   return re.test(str);
 };
+
 // console.log(regMatch('aasdff_8369@hackerrankteam.com')); // pass
 // console.log(regMatch('aasdffa_8369@hackerrankteam.com')); // 7 letters fail
 // console.log(regMatch('aasdffa_38369@hackerrankteam.com')); // 5 numbers fail
@@ -23,17 +24,16 @@ const regMatch = str => {
 // 3 get request from a sample api to display a return from the json object solved
 
 // 4 fibonnaci not optimized, print off full array of fib
-
+var x = [];
 function memoize(fn) {
   const cache = {};
   return function (...args) {
     if (cache[args]) {
       return cache[args];
     }
-
     const result = fn.apply(this, args);
     cache[args] = result;
-    console.log(Object.values(cache));
+    x.push(Object.values(cache));
     return result;
   };
 }
@@ -64,3 +64,36 @@ function slowFib(n) {
 const fib = memoize(slowFib);
 
 console.log(fib(4));
+console.log(x[x.length - 1]);
+
+// function braces(values) {
+//   let answers = [];
+//   let stack = [];
+//   let charMap = {
+//     '(': ')',
+//     '[': ']',
+//     '{': '}',
+//   };
+//   for (let x = 0; x < values.length; x++) {
+//     for (let i = 0; i < values[x].length; i++) {
+//       if (values[x][i] === '(' || values[x][i] === '[' || values[x][i] === '{') {
+//         stack.push(values[x][i]);
+//       } else {
+//         let check = stack.pop();
+//         if (values[x][i] !== charMap[check]) {
+//           answers.push('NO');
+//           console.log(values);
+//           console.log('NO');
+//           break;
+//         }
+//       }
+//     }
+//     if (stack.length !== 0) {
+//       answers.push('NO');
+//       return;
+//     } else {
+//       answers.push('YES');
+//     }
+//   }
+//   return answers;
+// }

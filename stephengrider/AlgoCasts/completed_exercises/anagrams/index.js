@@ -133,35 +133,3 @@ console.log(countingSortAnagram('hello'));
 // console.log(countingSortAnagram('hilltop', 'waterfall'));
 console.log(countingSortAnagram('jungle', 'gnulej'));
 // console.log(countingSortAnagram('jungle', 'tnulej'));;
-
-function braces(values) {
-  let answers = [];
-  let stack = [];
-  let charMap = {
-    '(': ')',
-    '[': ']',
-    '{': '}',
-  };
-  for (let x = 0; x < values.length; x++) {
-    for (let i = 0; i < values[x].length; i++) {
-      if (values[x][i] === '(' || values[x][i] === '[' || values[x][i] === '{') {
-        stack.push(values[x][i]);
-      } else {
-        let check = stack.pop();
-        if (values[x][i] !== charMap[check]) {
-          answers.push('NO');
-          console.log(values);
-          console.log('NO');
-          break;
-        }
-      }
-    }
-    if (stack.length !== 0) {
-      answers.push('NO');
-      return;
-    } else {
-      answers.push('YES');
-    }
-  }
-  return answers;
-}
