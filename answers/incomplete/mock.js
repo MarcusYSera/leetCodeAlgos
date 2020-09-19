@@ -24,8 +24,8 @@ const regMatch = str => {
 // 3 get request from a sample api to display a return from the json object solved
 
 // 4 fibonnaci not optimized, print off full array of fib
-var x = [];
 function memoize(fn) {
+  let x = [];
   const cache = {};
   return function (...args) {
     if (cache[args]) {
@@ -34,6 +34,7 @@ function memoize(fn) {
     const result = fn.apply(this, args);
     cache[args] = result;
     x.push(Object.values(cache));
+    console.log(x[x.length - 1]);
     return result;
   };
 }
@@ -64,7 +65,7 @@ function slowFib(n) {
 const fib = memoize(slowFib);
 
 console.log(fib(4));
-console.log(x[x.length - 1]);
+// console.log(x[x.length - 1]);
 
 // function braces(values) {
 //   let answers = [];
