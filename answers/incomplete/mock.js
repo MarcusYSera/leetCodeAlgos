@@ -25,7 +25,7 @@ const regMatch = str => {
 
 // 4 fibonnaci not optimized, print off full array of fib
 function memoize(fn) {
-  let x = [];
+  // let x = [];
   const cache = {};
   return function (...args) {
     if (cache[args]) {
@@ -33,8 +33,8 @@ function memoize(fn) {
     }
     const result = fn.apply(this, args);
     cache[args] = result;
-    x.push(Object.values(cache));
-    console.log(x[x.length - 1]);
+    // x.push(Object.values(cache));
+    // console.log(x[x.length - 1]);
     return result;
   };
 }
@@ -43,6 +43,7 @@ function slowFib(n) {
   if (n < 2) {
     return n;
   }
+  // console.log(fib(n - 1) + fib(n - 2));
   return fib(n - 1) + fib(n - 2);
 }
 

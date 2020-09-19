@@ -8,7 +8,8 @@
 
 // 3 Solutions
 
-function reverse(str) {}
+function reverse(str) {
+}
 
 console.log(reverse('abcd'));
 console.log(reverse('hasdfgweqrg'));

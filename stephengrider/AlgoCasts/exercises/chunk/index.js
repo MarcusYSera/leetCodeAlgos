@@ -11,15 +11,19 @@
 // three solutions
 
 function chunk(array, size) {
-  let i = 0;
   let chunked = [];
-  while (i < array.length) {
-    chunked.push(array.slice(i, size + i));
-    i += size;
+  for (let element of array) {
+    let last = chunked[chunked.length - 1];
+    if (!last || last.length === size) {
+      chunked.push([element]);
+    } else {
+      chunked[chunked.length - 1].push(element);
+      // last.push(element);
+    }
   }
   return chunked;
 }
 
 module.exports = chunk;
 
-console.log(chunk([1, 2, 3, 4, 5, 6], 2));
+console.log(chunk([1, 2, 3, 4, 5, 6], 3));
