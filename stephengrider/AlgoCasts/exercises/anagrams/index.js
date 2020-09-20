@@ -9,11 +9,11 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-  return sortedString(stringA) === sortedString(stringB);
+
 }
 
-const sortedString = str => {
-  return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
+const charMap = str => {
+
 };
 
 module.exports = anagrams;
