@@ -9,6 +9,11 @@
 // 3 Solutions
 
 function reverse(str) {
+  let answer = '';
+  for (let char of str) {
+    answer = char + answer;
+  }
+  return answer;
 }
 
 console.log(reverse('abcd'));
