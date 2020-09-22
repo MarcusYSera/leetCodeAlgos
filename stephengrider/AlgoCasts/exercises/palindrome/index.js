@@ -9,9 +9,7 @@
 
 // Two Solutions
 
-function palindrome(str) {
-  
-}
+function palindrome(str) {}
 
 module.exports = palindrome;
 console.log(palindrome('apple'));
