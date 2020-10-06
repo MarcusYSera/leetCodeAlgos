@@ -7,9 +7,7 @@
 
 // One Solution
 
-function maxChar(str) {
-  
-}
+function maxChar(str) {}
 
 module.exports = maxChar;
 

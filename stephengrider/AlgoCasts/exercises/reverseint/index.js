@@ -10,8 +10,7 @@
 
 // One Solution
 
-function reverseInt(n) {
-}
+function reverseInt(n) {}
 
 module.exports = reverseInt;
 
