@@ -9,8 +9,10 @@
 
 // Two solutions
 
-function capitalize(str) {
-  
-}
+function capitalize(str) {}
 
 module.exports = capitalize;
+
+console.log(capitalize('look, it is working!'));
+console.log(capitalize('a lazy fox'));
+console.log(capitalize('a short sentence'));
