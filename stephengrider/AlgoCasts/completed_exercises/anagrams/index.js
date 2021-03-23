@@ -13,6 +13,7 @@ function anagrams(stringA, stringB) {
 }
 
 function cleanString(str) {
+  //regex replaces anything that is not a letter including spaces, and sign, periods
   return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
 }
 

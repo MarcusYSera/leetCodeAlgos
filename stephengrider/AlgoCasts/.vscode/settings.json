@@ -1,0 +1,12 @@
+{
+  "workbench.editorAssociations": [
+  
+  ],
+  "files.exclude": {
+    "**/.gitignore": true,
+    "**/coverage": true,
+    "**/diagrams": true,
+    "**/LICENSE": true,
+    "**/README.md": true
+  }
+}
